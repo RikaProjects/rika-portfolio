@@ -11,7 +11,7 @@
       document.documentElement.classList.remove('dark');
       document.documentElement.style.colorScheme = 'light';
     }
-  } catch (e) {
+  } catch {
     // Mengabaikan error jika localStorage tidak tersedia
   }
 })();

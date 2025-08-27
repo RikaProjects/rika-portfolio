@@ -2,18 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import React from "react";
 
 export default function Hero() {
   const [openForm, setOpenForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false); // State baru untuk menangani error
+  const [error, setError] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target;
+    const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    
-    // Set status kembali ke awal sebelum fetch baru
+
     setSubmitted(false);
     setError(false);
 
@@ -29,17 +29,15 @@ export default function Hero() {
       if (response.ok) {
         setSubmitted(true);
         form.reset();
-        setTimeout(() => setSubmitted(false), 4000); // Pesan sukses hilang setelah 4 detik
+        setTimeout(() => setSubmitted(false), 4000);
       } else {
-        // Menangkap error jika respons tidak OK
         setError(true);
-        setTimeout(() => setError(false), 4000); // Pesan error hilang setelah 4 detik
+        setTimeout(() => setError(false), 4000);
       }
-
-    } catch (err) {
+    } catch {
       // Menangkap error jaringan atau lainnya
       setError(true);
-      setTimeout(() => setError(false), 4000); // Pesan error hilang setelah 4 detik
+      setTimeout(() => setError(false), 4000);
     }
   };
 
@@ -76,8 +74,7 @@ export default function Hero() {
               </h1>
             </div>
             <p className="text-gray-600 dark:text-gray-300 text-lg lg:text-xl mt-8 mb-10 leading-relaxed max-w-2xl">
-              "I'm Rika, a passionate D3 Information Management student. 
-              I build websites and analyze systems and data to support business growth."
+              I&apos;m Rika, a passionate D3 Information Management student. I build websites and analyze systems and data to support business growth.
             </p>
 
             {/* CTA Buttons */}

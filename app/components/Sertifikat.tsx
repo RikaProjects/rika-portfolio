@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link"; // Menggunakan Link dari Next.js untuk navigasi internal
 
 // Ganti data di bawah ini dengan sertifikat yang kamu miliki
 const certificates = [
@@ -105,7 +104,7 @@ export default function Certificate() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/60 transition-opacity duration-300
-                                group-hover:opacity-30" />
+                                 group-hover:opacity-30" />
               </div>
 
               {/* Certificate Content */}
@@ -130,9 +129,9 @@ export default function Certificate() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white
-                             rounded-lg flex items-center justify-center gap-2
-                             hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors
-                             shadow-lg shadow-blue-500/20"
+                                 rounded-lg flex items-center justify-center gap-2
+                                 hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors
+                                 shadow-lg shadow-blue-500/20"
                 >
                   View Certificate
                 </motion.a>
