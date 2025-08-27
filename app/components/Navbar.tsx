@@ -39,6 +39,7 @@ export default function Navbar() {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#certificates", label: "Certificates" },
   ];
 
   if (!mounted) return null;
@@ -64,7 +65,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                AM
+                RK
               </motion.span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 group-hover:w-full transition-all duration-300" />
             </Link>
@@ -236,7 +237,7 @@ export default function Navbar() {
                 <div className="p-6 border-t border-purple-500/10 dark:border-purple-500/5">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      © 2024 Arthur Morgan
+                      © 2025 Rika Rostika Afipah
                     </span>
                     <motion.button
                       whileHover={{ scale: 1.1 }}

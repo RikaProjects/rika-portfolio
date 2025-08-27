@@ -5,30 +5,53 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "EcoTrack Dashboard",
-    description: "A real-time analytics dashboard for environmental monitoring, built with Next.js and WebSocket for live data visualization.",
+    title: "ETL Pipeline",
+    description: "The goal of this project is to create an automated pipeline that extracts product data from an e-commerce fashion website, cleans and transforms it.",
     image: "/Images/project.jpg",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "WebSocket"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["Python", "BeautifulSoup", "Pandas", "gspread"],
+    githubUrl: "https://github.com/RikaProjects/etl-fashion-studio",
     color: "from-emerald-500 to-teal-500"
   },
   {
-    title: "CryptoFlow",
-    description: "Cryptocurrency trading platform with advanced charting capabilities and real-time market data integration.",
+    title: "SaFaNa (System Analytics Fauna Nusantara)",
+    description: "SaFaNa is an AI-based web platform developed to detect and report on the conservation status of wildlife in Indonesia through the analysis of images or photos uploaded by users.",
     image: "/Images/project.jpg",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["TensorFlow", "Ultralytics YOLOv8", "Roboflow", "FastAPI", 'etc'],
+    demoUrl: "https://tim-capstone-cc25-cf161.github.io/frontend-safana-deteksi-hewan-langka/#/", // Proyek ini punya demoUrl
+    githubUrl: "https://github.com/Tim-Capstone-CC25-CF161",
     color: "from-blue-500 to-indigo-500"
   },
   {
-    title: "AI Content Studio",
-    description: "Content generation platform powered by AI, helping creators produce high-quality content efficiently.",
+    title: "SIPOSPEDA (Sistem Informasi Pengelolaan stok dan Penjualan Daging Ayam)",
+    description: "A web-based information system developed to help businesses manage chicken meat stock and sales in an organized manner.",
     image: "/Images/project.jpg",
-    tags: ["Next.js", "OpenAI", "PostgreSQL", "AWS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["Javascript", "CSS", "PHP", "MySQL"],
+    githubUrl: "https://github.com/RikaProjects/SIPOSPEDA-PROYEK",
+    color: "from-blue-500 to-indigo-500"
+  },
+  {
+    title: "Analisis Sentimen Ulasan Shopee",
+    description: "This project aims to analyze sentiment in product reviews from Shopee using web scraping, text processing, and machine learning techniques.",
+    image: "/Images/project.jpg",
+    tags: ["Python", "numpy", "Seaborn", "pandas", "scikit-learn", "tensorflow"],
+    githubUrl: "https://github.com/RikaProjects/Proyek_Analisis_Sentimen",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    title: "Klasifikasi Gambar Hewan",
+    description: "This project classifies images of dogs, cats, and wild animals. The model is optimized in saved_model, tflite, and tfjs_model formats.", 
+    image: "/Images/project.jpg",
+    tags: ["Python", "TensorFlow", "Keras", "Scikit-learn", "NumPy", "Pandas", "etc" ],
+    githubUrl: "https://github.com/RikaProjects/Klasifikasi_Gambar",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    title: "Analisis Data E-commerce",
+    description: "Analyzing product categories with the highest revenue, highest review scores, and monthly order trends.",
+    image: "/Images/project.jpg",
+    tags: ["pandas", "matplotlib", "seaborn", "streamlit", "babel", "numpy"],
+    demoUrl: "https://dqei4s7x3efcqfdzrvr7944.streamlit.app/", // Proyek ini punya demoUrl
+    githubUrl: "https://github.com/RikaProjects/Proyek-Analisis-Data",
     color: "from-purple-500 to-pink-500"
   }
 ];
@@ -71,7 +94,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               className="group relative bg-white dark:bg-gray-800/50 rounded-2xl overflow-hidden 
-                         backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+                                  backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
             >
               {/* Project Image section */}
               <div className="relative h-64 overflow-hidden">
@@ -82,7 +105,7 @@ export default function Projects() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 
-                              group-hover:opacity-30" />
+                                      group-hover:opacity-30" />
                 
                 {/* Floating Tags*/}
                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
@@ -90,7 +113,7 @@ export default function Projects() {
                     <span
                       key={tag}
                       className="px-3 py-1 text-sm bg-transparent text-white rounded-lg 
-                               backdrop-blur-sm border border-white/10"
+                                          backdrop-blur-sm border border-white/10"
                     >
                       {tag}
                     </span>
@@ -101,8 +124,8 @@ export default function Projects() {
               {/* Project Content */}
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 
-                             group-hover:text-purple-600 dark:group-hover:text-purple-400 
-                             transition-colors">
+                                      group-hover:text-purple-600 dark:group-hover:text-purple-400 
+                                      transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-8 line-clamp-3">
@@ -111,30 +134,33 @@ export default function Projects() {
 
                 {/* Action Buttons with Updated Design */}
                 <div className="flex gap-4 flex-col md:flex-row">
-                  <motion.a
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    href={project.demoUrl}
-                    className="px-6 py-2.5 bg-purple-600 dark:bg-purple-500 text-white 
-                             rounded-lg flex items-center gap-2 hover:bg-purple-700 
-                             dark:hover:bg-purple-600 transition-colors shadow-lg 
-                             shadow-purple-500/20"
-                  >
-                    Live Demo
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </motion.a>
+                  {/* Kondisi untuk menampilkan tombol Live Demo */}
+                  {project.demoUrl && ( // Hanya tampilkan jika project.demoUrl ada
+                    <motion.a
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      href={project.demoUrl}
+                      className="px-6 py-2.5 bg-purple-600 dark:bg-purple-500 text-white 
+                                          rounded-lg flex items-center gap-2 hover:bg-purple-700 
+                                          dark:hover:bg-purple-600 transition-colors shadow-lg 
+                                          shadow-purple-500/20"
+                    >
+                      Live Demo
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </motion.a>
+                  )}
                   <motion.a
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     href={project.githubUrl}
                     className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-800 
-                             dark:text-white rounded-lg flex items-center gap-2 
-                             hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors 
-                             shadow-lg shadow-gray-200/20 dark:shadow-gray-900/20 
-                             border border-gray-200 dark:border-gray-700"
+                                          dark:text-white rounded-lg flex items-center gap-2 
+                                          hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors 
+                                          shadow-lg shadow-gray-200/20 dark:shadow-gray-900/20 
+                                          border border-gray-200 dark:border-gray-700"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />

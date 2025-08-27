@@ -7,9 +7,9 @@ const skillCategories = [
     title: "Frontend",
     skills: [
       { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
-      { name: "TailwindCSS", level: 95 },
+      { name: "Javascript", level: 80 },
+      { name: "TailwindCSS", level: 75 },
+      { name: "Codeigniter 3 dan 4", level: 95 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -22,8 +22,8 @@ const skillCategories = [
     skills: [
       { name: "Node.js", level: 85 },
       { name: "Express", level: 80 },
-      { name: "MongoDB", level: 75 },
-      { name: "PostgreSQL", level: 70 },
+      { name: "PHP",      level: 85 },
+      { name: "MySQL",   level: 80 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,17 +32,17 @@ const skillCategories = [
     ),
   },
   {
-    title: "DevOps",
+    title: "Machine Learning",
     skills: [
-      { name: "Docker", level: 75 },
-      { name: "AWS", level: 70 },
-      { name: "Git", level: 90 },
-      { name: "CI/CD", level: 80 },
+      { name: "Python", level: 75 },
+      { name: "TensorFlow", level: 70 },
+      { name: "Scikit-learn", level: 80 },
+      { name: "Pandas / NumPy", level: 80 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.5 14c-1.553 0-2.946-.792-3.946-2.274a7.024 7.024 0 00-3.946 2.274c-1.553 0-2.946-.792-3.946-2.274a7.024 7.024 0 00-3.946 2.274M16 10v-.5a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5v.5m4 0a2.5 2.5 0 01-.5 1.5m-3 0a2.5 2.5 0 00-.5 1.5m6 2.5H6m6-2a6 6 0 01-3 5.196M9 8.196a9 9 0 00-9 0m9-2.196A9 9 0 0118 6m-3 10c.23-.083.488-.11.76-.11a2.5 2.5 0 002.5-2.5v-2.5a2.5 2.5 0 00-2.5-2.5H9.5a2.5 2.5 0 00-2.5 2.5v2.5a2.5 2.5 0 002.5 2.5h.24" />
+</svg>
     ),
   },
 ];

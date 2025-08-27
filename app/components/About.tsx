@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Tailwind CSS
 export default function About() {
   return (
     <section id="about" className="relative py-20 bg-white dark:bg-black">
@@ -19,11 +20,10 @@ export default function About() {
             className="lg:w-1/2"
           >
             <div className="relative group">              
-              {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden bg-white">
                 <Image
-                  src="/Images/me.png"
-                  alt="Arthur Morgan"
+                  src="/Images/me.jpg"
+                  alt="Rika Rostika Afipah"
                   width={600}
                   height={700}
                   className="object-cover transition duration-300 group-hover:scale-105"
@@ -46,19 +46,22 @@ export default function About() {
 
             <div className="space-y-6 text-gray-600 dark:text-gray-300">
               <p>
-                Hello! I&apos;m Arthur Morgan, a Full Stack Developer with 5 years of experience
-                in crafting digital solutions that make a difference.
-              </p>
-              
-              <p>
-                Based in Saint Denis, I&apos;ve had the opportunity to work with diverse clients
-                ranging from startups to established enterprises. My expertise lies in
-                building scalable web applications that combine functionality with exceptional user experience.
+                Hello! I&apos;m Rika Rostika Afipah, a passionate D3 Information Management student 
+                specializing in Full Stack Development, system analysis, and data management. 
+                I create websites, applications, and data-driven solutions to support business growth 
+                and enhance user engagement.
               </p>
 
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing
-                to open-source projects, or sharing knowledge with the developer community.
+                Throughout my studies and projects, I&apos;ve gained experience in programming languages 
+                such as Python, SQL, and PHP, as well as developing user-friendly interfaces and efficient 
+                backend systems. I enjoy solving complex problems, learning new technologies, and applying 
+                them to build meaningful digital experiences.
+              </p>
+
+              <p>
+                When I&apos;m not coding, you&apos;ll find me exploring new tools, contributing to projects, 
+                or collaborating with others to create impactful solutions.
               </p>
             </div>
 
@@ -70,7 +73,9 @@ export default function About() {
               <div className="flex flex-wrap gap-3">
                 {[
                   'React', 'Next.js', 'TypeScript', 'Node.js', 
-                  'TailwindCSS', 'MongoDB', 'AWS', 'Docker'
+                  'Javascript', 'CSS', 'MySQL', 'Python', 'PHP', 'Structured Query Language (SQL)',
+                  'Laravel', 'CodeIgniter 3', 'CodeIgniter 4', 'Bootstrap',
+                  'TensorFlow', 'Deep Learning', 'ETL Pipeline', 'Git', 'Machine Learning', 'Data Analysis','System Analysis'
                 ].map((skill) => (
                   <motion.span 
                     key={skill}
@@ -83,28 +88,6 @@ export default function About() {
                   </motion.span>
                 ))}
               </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12">
-              {[
-                { number: '5+', label: 'Years', color: 'from-purple-600 to-indigo-600' },
-                { number: '50+', label: 'Projects', color: 'from-blue-600 to-cyan-600' },
-                { number: '30+', label: 'Clients', color: 'from-emerald-600 to-teal-600' },
-                { number: '99%', label: 'Success', color: 'from-orange-600 to-amber-600' }
-              ].map((stat) => (
-                <motion.div 
-                  key={stat.label}
-                  whileHover={{ y: -5 }}
-                  className="p-4 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200/50 
-                  dark:ring-gray-800/50 shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>
