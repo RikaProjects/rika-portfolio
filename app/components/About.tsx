@@ -73,8 +73,8 @@ export default function About() {
               <div className="flex flex-wrap gap-3">
                 {[
                   'React', 'Next.js', 'TypeScript', 'Node.js', 
-                  'Javascript', 'CSS', 'MySQL', 'Python', 'PHP', 'Structured Query Language (SQL)',
-                  'Laravel', 'CodeIgniter 3', 'CodeIgniter 4', 'Bootstrap',
+                  'Javascript', 'CSS', 'MySQL', 'Python', 'PHP',
+                  'Laravel', 'CodeIgniter', 'Bootstrap',
                   'TensorFlow', 'Deep Learning', 'ETL Pipeline', 'Git', 'Machine Learning', 'Data Analysis','System Analysis'
                 ].map((skill) => (
                   <motion.span 
