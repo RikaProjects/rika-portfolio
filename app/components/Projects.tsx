@@ -6,7 +6,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "ETL Pipeline",
-    description: "The goal of this project is to create an automated pipeline that extracts product data from an e-commerce fashion website, cleans and transforms it.",
+    description: "An automated pipeline for extracting and cleaning e-commerce data.",
     image: "/Images/project.jpg",
     tags: ["Python", "BeautifulSoup", "Pandas", "gspread"],
     githubUrl: "https://github.com/RikaProjects/etl-fashion-studio",
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "SaFaNa (System Analytics Fauna Nusantara)",
-    description: "SaFaNa is an AI-based web platform developed to detect and report on the conservation status of wildlife in Indonesia through the analysis of images or photos uploaded by users.",
+    description: "An AI-based platform for detecting Indonesian wildlife from photos.",
     image: "/Images/project.jpg",
     tags: ["TensorFlow", "Ultralytics YOLOv8", "Roboflow", "FastAPI", 'etc'],
     demoUrl: "https://tim-capstone-cc25-cf161.github.io/frontend-safana-deteksi-hewan-langka/#/", // Proyek ini punya demoUrl
@@ -22,8 +22,8 @@ const projects = [
     color: "from-blue-500 to-indigo-500"
   },
   {
-    title: "SIPOSPEDA (Sistem Informasi Pengelolaan stok dan Penjualan Daging Ayam)",
-    description: "A web-based information system developed to help businesses manage chicken meat stock and sales in an organized manner.",
+    title: "SIPOSPEDA",
+    description: "A web system for managing chicken meat stock and sales.",
     image: "/Images/project.jpg",
     tags: ["Javascript", "CSS", "PHP", "MySQL"],
     githubUrl: "https://github.com/RikaProjects/SIPOSPEDA-PROYEK",
@@ -31,28 +31,44 @@ const projects = [
   },
   {
     title: "Analisis Sentimen Ulasan Shopee",
-    description: "This project aims to analyze sentiment in product reviews from Shopee using web scraping, text processing, and machine learning techniques.",
+    description: "Analyzing Shopee review sentiment using machine learning.",
     image: "/Images/project.jpg",
     tags: ["Python", "numpy", "Seaborn", "pandas", "scikit-learn", "tensorflow"],
     githubUrl: "https://github.com/RikaProjects/Proyek_Analisis_Sentimen",
     color: "from-purple-500 to-pink-500"
   },
   {
-    title: "Klasifikasi Gambar Hewan",
-    description: "This project classifies images of dogs, cats, and wild animals. The model is optimized in saved_model, tflite, and tfjs_model formats.", 
+    title: "Animal Image Classification",
+    description: "A project classifying images of dogs, cats, and wild animals.", 
     image: "/Images/project.jpg",
     tags: ["Python", "TensorFlow", "Keras", "Scikit-learn", "NumPy", "Pandas", "etc" ],
     githubUrl: "https://github.com/RikaProjects/Klasifikasi_Gambar",
     color: "from-purple-500 to-pink-500"
   },
   {
-    title: "Analisis Data E-commerce",
-    description: "Analyzing product categories with the highest revenue, highest review scores, and monthly order trends.",
+    title: "E-commerce Data Analysis",
+    description: "Analyzing product categories, review scores, and monthly order trends.",
     image: "/Images/project.jpg",
     tags: ["pandas", "matplotlib", "seaborn", "streamlit", "babel", "numpy"],
     demoUrl: "https://dqei4s7x3efcqfdzrvr7944.streamlit.app/", // Proyek ini punya demoUrl
     githubUrl: "https://github.com/RikaProjects/Proyek-Analisis-Data",
     color: "from-purple-500 to-pink-500"
+  },
+  {
+        title: "Book Recommendation System - GoodBooks-10k",
+    description: "A book recommendation system using Content-Based and Collaborative Filtering.",
+    image: "/Images/project.jpg",
+    tags: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Keras"],
+    githubUrl: "https://github.com/RikaProjects/rekomendasi-buku-machine-learning",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+        title: "BMLP Final Project - classification and clustering",
+    description: "This project covers two key machine learning topics: classification and clustering. The objective was to apply several popular algorithms to a bank transaction dataset to test their performance and derive useful insights from the data.",
+    image: "/Images/project.jpg",
+    tags: ["Python", "scikit-learn", "PCA", "K-Means", "Decision Tree"],
+    githubUrl: "https://github.com/RikaProjects/bmlp-final-project",
+    color: "from-blue-500 to-indigo-500",
   }
 ];
 
