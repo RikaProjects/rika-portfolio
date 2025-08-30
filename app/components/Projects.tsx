@@ -30,7 +30,7 @@ const projects = [
     color: "from-blue-500 to-indigo-500"
   },
   {
-    title: "Analisis Sentimen Ulasan Shopee",
+    title: "Shopee Review Sentiment Analysis.",
     description: "Analyzing Shopee review sentiment using machine learning.",
     image: "/Images/project.jpg",
     tags: ["Python", "numpy", "Seaborn", "pandas", "scikit-learn", "tensorflow"],
@@ -55,7 +55,7 @@ const projects = [
     color: "from-purple-500 to-pink-500"
   },
   {
-        title: "Book Recommendation System - GoodBooks-10k",
+    title: "Book Recommendation System - GoodBooks-10k",
     description: "A book recommendation system using Content-Based and Collaborative Filtering.",
     image: "/Images/project.jpg",
     tags: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Keras"],
@@ -63,8 +63,8 @@ const projects = [
     color: "from-emerald-500 to-teal-500",
   },
   {
-        title: "BMLP Final Project - classification and clustering",
-    description: "This project covers two key machine learning topics: classification and clustering. The objective was to apply several popular algorithms to a bank transaction dataset to test their performance and derive useful insights from the data.",
+    title: "BMLP Final Project - classification and clustering",
+    description: "Applying classification and clustering algorithms to bank transaction data.",
     image: "/Images/project.jpg",
     tags: ["Python", "scikit-learn", "PCA", "K-Means", "Decision Tree"],
     githubUrl: "https://github.com/RikaProjects/bmlp-final-project",
