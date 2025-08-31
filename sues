@@ -1,0 +1,83 @@
+[33mcommit 465abebee95079b49ef3b49dc522a24801ec87f1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Sun Aug 31 00:32:06 2025 +0700
+
+    Perbarui proyek
+
+[33mcommit c36df5f54c0456713fdf38b4a11df9373a6e00a5[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Sun Aug 31 00:24:49 2025 +0700
+
+    Perbarui deskripsi proyek portofolio
+
+[33mcommit d915b891f6a5e987450eb8f78154366581783f24[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Fri Aug 29 13:19:19 2025 +0700
+
+    Update skill
+
+[33mcommit 46371396909fa9c5b278d573fba8154498a11860[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Wed Aug 27 16:20:23 2025 +0700
+
+    Update
+
+[33mcommit 75d4cfd44086c554b11cea1f94334a325f775535[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Wed Aug 27 16:06:56 2025 +0700
+
+    Final fix All
+
+[33mcommit 9abe189e8e67f0915fafb60444a7da2218c15e22[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Wed Aug 27 15:34:31 2025 +0700
+
+    Final fix: all build errors resolved
+
+[33mcommit ba768ff8e7a7282d05158ed7a81e5f16517a8c1a[m
+Author: RIKA ROSTIKA AFIPAH <rikarapipah@gmail.com>
+Date:   Wed Aug 27 15:06:15 2025 +0700
+
+    Initial commit of Rika's portfolio
+
+[33mcommit 2a08642418f9e1a256cff89aaf5379be48c622f7[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: vinodjangid07 <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 11:59:48 2025 +0530
+
+    fix(ui): fixed minor ui issues
+
+[33mcommit 17c2aa37c8d8f310bfc3cffd27d0d3a4386a4b0b[m
+Author: Vinod Jangid <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 10:12:28 2025 +0530
+
+    chore: add MIT License
+
+[33mcommit 8f5ae4ea65c073ad83c0cfe7c9bb395fd2a9cbd4[m
+Author: vinodjangid07 <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 10:09:05 2025 +0530
+
+    doc: readme update
+
+[33mcommit 0e470a7ba35b2a584c3735f4ebe4502f88e8e978[m
+Author: vinodjangid07 <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 10:05:18 2025 +0530
+
+    fix(build): Netlify wasn't happy with the apostrophe, so i fixed it!
+
+[33mcommit 35b6ad98fd10e66fbd05f0f36c5b815fc95796c5[m
+Author: Vinod Jangid <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 09:59:03 2025 +0530
+
+    docs: updating readme preview
+
+[33mcommit 81af9f80b09e6ac60c50aa326939c6fb46814091[m
+Author: vinodjangid07 <infovinodjangid@gmail.com>
+Date:   Sat Feb 22 09:56:15 2025 +0530
+
+    Initial commit: Setting up Next.js
+
+[33mcommit b1f44d4fd4f726cfde57ab0087e851aee6fa9ad5[m
+Author: vinodjangid07 <infovinodjangid@gmail.com>
+Date:   Fri Feb 21 17:45:02 2025 +0530
+
+    Initial commit from Create Next App
