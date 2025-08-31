@@ -69,6 +69,15 @@ const projects = [
     tags: ["Python", "scikit-learn", "PCA", "K-Means", "Decision Tree"],
     githubUrl: "https://github.com/RikaProjects/bmlp-final-project",
     color: "from-blue-500 to-indigo-500",
+  },
+    {
+    title: "Tebak Angka Game",
+    description: "This is a self-initiated project developed to hone my skills in React and Tailwind CSS.",
+    image: "/Images/project.jpg",
+    tags: ["React", "JavaScript", "Tailwind CSS", "Game Dev"],
+    demoUrl: "https://tebak-angka-game.vercel.app/",
+    githubUrl: "https://github.com/RikaProjects/tebak-angka-game",
+    color: "from-yellow-400 to-orange-500",
   }
 ];
 
