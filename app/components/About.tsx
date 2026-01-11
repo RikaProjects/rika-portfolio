@@ -70,33 +70,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Skills Section */}
-            <div className="mt-12">
-              <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-6">
-                Technologies & Skills
-              </h3>
-
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "Python", "PHP", "JavaScript", "HTML", "CSS", "SQL",
-                  "React", "Next.js", "Laravel", "CodeIgniter", "Bootstrap",
-                  "Data Analysis", "Machine Learning", "Credit Risk Modeling",
-                  "NLP", "Computer Vision", "TensorFlow", "Scikit-Learn",
-                  "System Analysis", "UML", "BPMN", "Git", "Google Colab",
-                ].map((skill) => (
-                  <motion.span
-                    key={skill}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-4 py-2 bg-white dark:bg-gray-800 ring-1 ring-purple-500/20
-                    text-gray-700 dark:text-gray-300 rounded-lg text-sm
-                    hover:ring-purple-500/40 shadow-sm hover:shadow transition-all duration-300"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-
           </motion.div>
         </div>
       </div>

@@ -73,9 +73,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600 dark:text-gray-300 text-lg lg:text-xl mt-8 mb-10 leading-relaxed max-w-2xl">
-            A D3 Information Management student who builds web applications,
-            analyzes systems, and develops data-driven & machine learning
-            solutions.
+            A D3 Information Management student focused on building web applications,
+            system analysis, and data-driven & machine learning solutions.
+
           </p>
 
           {/* ================= BUTTONS ================= */}

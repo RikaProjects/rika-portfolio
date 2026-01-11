@@ -22,7 +22,7 @@ const certificates = [
     color: "from-blue-500 to-indigo-500"
   },
   {
-  title: "SAP BC400 – Business Process Configuration",
+  title: "SAP BC400",
   issuer: "Edugate",
   image: "/Images/sertifikat_sapbc.jpeg",
   date: "July 21, 2025",
@@ -38,7 +38,7 @@ const certificates = [
     color: "from-emerald-500 to-teal-500"
   },
   {
-  title: "Membangun Sistem Machine Learning",
+  title: "Membangun Sistem ML",
   issuer: "Dicoding",
   image: "/Images/sertifikat_membangunML.jpg", // pastikan path gambar sertifikat
   date: "November 2025",
