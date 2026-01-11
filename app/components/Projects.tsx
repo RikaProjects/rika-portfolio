@@ -78,6 +78,22 @@ const projects = [
     demoUrl: "https://tebak-angka-game.vercel.app/",
     githubUrl: "https://github.com/RikaProjects/tebak-angka-game",
     color: "from-yellow-400 to-orange-500",
+  },
+  {
+    title: "Credit Risk Prediction – ID/X Partners",
+    description: "Machine learning model to predict loan eligibility and credit risk for lending companies.",
+    image: "/Images/project.jpg",
+    tags: ["Python", "Pandas", "Scikit-learn", "EDA", "Classification"],
+    githubUrl: "https://github.com/RikaProjects/IDX-Partners-Data-Scientist-Project",
+    color: "from-emerald-500 to-teal-500"
+  },
+   {
+    title: "Credit Scoring Model – Home Credit Indonesia",
+    description: "Credit scoring model using logistic regression to reduce default and rejection risk",
+    image: "/Images/project.jpg",
+    tags: ["Python", "Logistic Regression", "Machine Learning", "Risk Analysis"],
+    githubUrl: "https://github.com/RikaProjects/home-credit-risk-analysis",
+    color: "from-emerald-500 to-teal-500"
   }
 ];
 

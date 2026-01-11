@@ -6,12 +6,28 @@ import Image from "next/image";
 // Ganti data di bawah ini dengan sertifikat yang kamu miliki
 const certificates = [
   {
+  title: "Junior Web Developer (BNSP)",
+  issuer: "Badan Nasional Sertifikasi Profesi",
+  image: "/Images/sertifikasi_bnsp.jpeg",
+  date: "November 2025 – November 2028",
+  link: "https://drive.google.com/file/d/1GIhsgqTmkEetn_J-u6Bwv0PMnlEwqUef/view?usp=sharing",
+  color: "from-red-500 to-orange-500"
+  },
+  {
     title: "Machine Learning Engineer",
     issuer: "Dicoding x DBS Foundation",
     image: "/Images/sertifikat_ml.png", // Ganti dengan path gambar sertifikatmu
     date: "February 10, 2025 - July 16, 2025",
     link: "https://drive.google.com/file/d/1TzYKKueONL6ZpgI4Yu3ZBeweLI0680GL/view?usp=drive_link", // Ganti dengan URL sertifikatmu
     color: "from-blue-500 to-indigo-500"
+  },
+  {
+  title: "SAP BC400 – Business Process Configuration",
+  issuer: "Edugate",
+  image: "/Images/sertifikat_sapbc.jpeg",
+  date: "July 21, 2025",
+  link: "https://drive.google.com/file/d/1QrihXpyMtV6DAIrI3W7dKfi7Z5DPF_iS/view?usp=sharing",
+  color: "from-indigo-500 to-purple-500"
   },
   {
     title: "SAP01 Fundamental",
@@ -22,11 +38,19 @@ const certificates = [
     color: "from-emerald-500 to-teal-500"
   },
   {
+  title: "Membangun Sistem Machine Learning",
+  issuer: "Dicoding",
+  image: "/Images/sertifikat_membangunML.jpg", // pastikan path gambar sertifikat
+  date: "November 2025",
+  link: "https://www.dicoding.com/certificates/81P2563YNPOY",
+  color: "from-yellow-500 to-orange-500"
+  },
+  {
     title: "Machine Learning Terapan",
     issuer: "Dicoding",
-    image: "/Images/sertifikat_terapan.jpg", // Ganti dengan path gambar sertifikatmu
+    image: "/Images/sertifikat_terapan.jpg", // Ganti dengan path gambar sertifikat
     date: "Juni 2025",
-    link: "https://www.dicoding.com/certificates/MEPJQ44EWX3V", // Ganti dengan URL sertifikatmu
+    link: "https://www.dicoding.com/certificates/MEPJQ44EWX3V", // Ganti dengan URL sertifikat
     color: "from-emerald-500 to-teal-500"
   },
   {
