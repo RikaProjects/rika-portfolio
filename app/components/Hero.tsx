@@ -6,10 +6,10 @@ import React from "react";
 
 /* ================= CV LINKS ================= */
 const CV_VIEW_URL =
-  "https://drive.google.com/file/d/1bTJqTso5nhqJAS78XxljqafvCTgqsayD/view?usp=sharing";
+  "https://drive.google.com/file/d/1qnUIrJRTgiCc5FcgaAuwu4oexi3xRiQY/view?usp=sharing";
 
 const CV_DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1bTJqTso5nhqJAS78XxljqafvCTgqsayD";
+  "https://drive.google.com/uc?export=download&id=1qnUIrJRTgiCc5FcgaAuwu4oexi3xRiQY";
 /* ============================================ */
 
 export default function Hero() {
