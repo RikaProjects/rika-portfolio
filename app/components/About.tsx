@@ -1,84 +1,123 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
-  FaGraduationCap,
   FaBriefcase,
-  FaBrain,
-  FaFileAlt,
+  FaProjectDiagram,
+  FaDatabase,
+  FaCode,
+  FaTools,
 } from "react-icons/fa";
 
-const achievements = [
+const experiences = [
   {
-    icon: FaGraduationCap,
-    title: "GPA 3.93 / 4.00",
-    description: "D-III Information Management",
-    color: "purple",
+    number: "01",
+    title: "Operational Data Analysis",
+    description:
+      "Performed data matching, mapping, cleansing, and validation of more than 4,000 post office master records across six regional offices using Microsoft Excel. The work included LPU and Non-LPU classification and profitability analysis.",
   },
   {
-    icon: FaBriefcase,
-    title: "4,000+ Post Offices",
-    description: "PT Pos Indonesia",
-    color: "blue",
+    number: "02",
+    title: "Executive Dashboard",
+    description:
+      "Identified and mapped reporting requirements for four main dashboard panels: Courier Performance, Logistics, Financial Services, and Complaints (CCH). Contributed to dashboard UI design and the presentation of performance information, including transactions, revenue, targets, growth, SLA, and regional performance.",
   },
   {
-    icon: FaBrain,
-    title: "ML Engineer Graduate",
-    description: "Coding Camp · DBS Foundation",
-    color: "green",
+    number: "03",
+    title: "Sentiment & Topic Analysis",
+    description:
+      "Analyzed sentiment and topics from 118 Pospay application reviews using IndoBERT and BERTopic, with sentiment results validated against user ratings.",
   },
   {
-    icon: FaFileAlt,
-    title: "SINTA 5",
-    description: "Accredited Journal Publication",
-    color: "orange",
+    number: "04",
+    title: "Documentation & Coordination",
+    description:
+      "Prepared the Executive Dashboard User Manual (Juknis), coordinated with relevant stakeholders, and documented discussions and requirements through Minutes of Meeting (MoM).",
   },
 ];
 
-const colorStyles: Record<
-  string,
-  { border: string; iconBg: string; icon: string }
-> = {
-  purple: {
-    border: "border-purple-200 dark:border-purple-800",
-    iconBg: "bg-purple-100 dark:bg-purple-900/40",
-    icon: "text-purple-600 dark:text-purple-400",
+const skillGroups = [
+  {
+    icon: FaProjectDiagram,
+    title: "System & Business Analysis",
+    description:
+      "Analyzing business needs, modeling processes, and documenting system requirements.",
+    skills: [
+      "PIECES Framework",
+      "KANO Model",
+      "5 Whys",
+      "Ishikawa Diagram",
+      "Porter's Value Chain",
+      "BPMN",
+      "UML",
+      "Use Case Diagram",
+      "Requirement Gathering",
+      "Technical Documentation",
+    ],
   },
-  blue: {
-    border: "border-blue-200 dark:border-blue-800",
-    iconBg: "bg-blue-100 dark:bg-blue-900/40",
-    icon: "text-blue-600 dark:text-blue-400",
+  {
+    icon: FaDatabase,
+    title: "Data Analytics & Machine Learning",
+    description:
+      "Preparing, exploring, analyzing, and modeling data to generate meaningful insights.",
+    skills: [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "TensorFlow",
+      "YOLOv8",
+      "EDA",
+      "Data Cleansing",
+      "Data Mapping",
+      "IndoBERT",
+      "BERTopic",
+      "Looker Studio",
+    ],
   },
-  green: {
-    border: "border-green-200 dark:border-green-800",
-    iconBg: "bg-green-100 dark:bg-green-900/40",
-    icon: "text-green-600 dark:text-green-400",
+  {
+    icon: FaCode,
+    title: "Programming & Databases",
+    description:
+      "Developing web applications and working with relational database systems.",
+    skills: [
+      "Python",
+      "PHP",
+      "JavaScript",
+      "Django",
+      "CodeIgniter 4",
+      "PostgreSQL",
+      "MySQL",
+      "Oracle Database",
+    ],
   },
-  orange: {
-    border: "border-orange-200 dark:border-orange-800",
-    iconBg: "bg-orange-100 dark:bg-orange-900/40",
-    icon: "text-orange-600 dark:text-orange-400",
+  {
+    icon: FaTools,
+    title: "Tools & Platforms",
+    description:
+      "Using development, modeling, testing, design, and productivity tools.",
+    skills: [
+      "Enterprise Architect",
+      "Microsoft Visio",
+      "Figma",
+      "Balsamiq",
+      "PowerDesigner",
+      "Bizagi Modeler",
+      "Git",
+      "GitHub",
+      "SAP ERP",
+      "Postman",
+      "Katalon Studio",
+      "pgAdmin",
+      "Google Colab",
+      "VS Code",
+      "Microsoft Project",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Google Workspace",
+    ],
   },
-};
-
-const technologies = [
-  "Python",
-  "SQL",
-  "PHP",
-  "JavaScript",
-  "Django",
-  "CodeIgniter 4",
-  "PostgreSQL",
-  "MySQL",
-  "Pandas",
-  "NumPy",
-  "Scikit-learn",
-  "TensorFlow",
-  "BPMN",
-  "UML",
-  "Git",
-  "GitHub",
 ];
 
 const areasOfInterest = [
@@ -118,205 +157,161 @@ export default function About() {
           </span>
 
           <h2 className="mx-auto mt-5 max-w-4xl text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
-            Turning Business Challenges into{" "}
+            Bridging Business Needs and{" "}
             <span className="bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 bg-clip-text text-transparent">
-              Digital Solutions
+              Technology
             </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600 dark:text-gray-400 sm:text-lg">
-            Combining system analysis, business understanding, and data
-            analytics to build meaningful technology solutions.
+            Combining system analysis, business understanding, data analytics,
+            and software development to create practical solutions.
           </p>
         </motion.div>
 
-        <div className="grid items-start gap-14 lg:grid-cols-2 lg:gap-20">
-          {/* Profile Image */}
+        {/* Background & Professional Experience */}
+        <div className="grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          {/* Professional Background */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto w-full max-w-md lg:mx-0"
-          >
-            <div
-              aria-hidden="true"
-              className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-purple-600 via-fuchsia-500 to-indigo-600 opacity-20 blur-2xl"
-            />
-
-            <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 shadow-2xl dark:border-gray-800 dark:bg-gray-900">
-              <Image
-                src="/Images/me.jpeg"
-                alt="Rika Rostika Afipah"
-                width={520}
-                height={650}
-                priority
-                sizes="(max-width: 768px) 100vw, 520px"
-                className="aspect-[4/5] w-full object-cover object-center"
-              />
-
-              {/* Profile Caption */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-6 pb-7 pt-20 sm:px-8">
-                <p className="text-xl font-bold text-white sm:text-2xl">
-                  Rika Rostika Afipah
-                </p>
-
-                <p className="mt-2 text-sm leading-6 text-gray-200 sm:text-base">
-                  System Analyst · Business Analyst · Data Analyst
-                </p>
-              </div>
-            </div>
-
-            {/* Decorative Element */}
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-5 -right-5 -z-10 h-28 w-28 rounded-3xl border-2 border-purple-500/30"
-            />
-          </motion.div>
-
-          {/* About Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="flex flex-col"
           >
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 dark:text-purple-400">
               My Background
             </span>
 
             <h3 className="mt-4 text-2xl font-bold leading-snug text-gray-900 dark:text-white sm:text-3xl">
-              Bridging Business Needs and Technology
+              From Business Requirements to Digital Solutions
             </h3>
 
-            <p className="mt-6 text-base leading-8 text-gray-600 dark:text-gray-300">
-              Hi, I&apos;m{" "}
-              <strong className="font-semibold text-gray-900 dark:text-white">
-                Rika Rostika Afipah
-              </strong>
-              , a graduate of the D-III Information Management program at
-              Universitas Logistik dan Bisnis Internasional (ULBI), with a GPA
-              of 3.93/4.00. My primary interests are{" "}
-              <strong className="font-semibold text-gray-900 dark:text-white">
-                System Analysis, Business Analysis, and Data Analytics
-              </strong>
-              , supported by hands-on experience in web development and machine
-              learning.
-            </p>
+            <div className="mt-6 space-y-5 text-base leading-8 text-gray-600 dark:text-gray-300">
+              <p>
+                I am a fresh graduate of the{" "}
+                <strong className="font-semibold text-gray-900 dark:text-white">
+                  D-III Information Management
+                </strong>{" "}
+                program at Universitas Logistik dan Bisnis Internasional
+                (ULBI), with a GPA of 3.93/4.00. My academic background has
+                equipped me with knowledge of information systems, business
+                processes, data management, and software development.
+              </p>
 
-            <p className="mt-5 text-base leading-8 text-gray-600 dark:text-gray-300">
-              During my internship at{" "}
-              <strong className="font-semibold text-gray-900 dark:text-white">
-                PT Pos Indonesia (Persero)
-              </strong>
-              , I worked with operational data from more than 4,000 post offices
-              across six regional offices. My responsibilities included data
-              matching, mapping, cleansing, validation, and consolidation, as
-              well as identifying reporting requirements for an Executive
-              Dashboard.
-            </p>
+              <p>
+                During my internship as a{" "}
+                <strong className="font-semibold text-gray-900 dark:text-white">
+                  Growth Hacking Intern at PT Pos Indonesia (Persero)
+                </strong>{" "}
+                from March to June 2026, I worked on operational data analysis
+                and Executive Dashboard development. My responsibilities
+                included processing more than 4,000 post office records across
+                six regional offices, identifying reporting requirements,
+                contributing to dashboard UI design, and preparing its User
+                Manual (Juknis).
+              </p>
 
-            <p className="mt-5 text-base leading-8 text-gray-600 dark:text-gray-300">
-              Through academic and industry-based projects, I have worked
-              across the software development lifecycle, from requirements
-              gathering and business process modeling to application
-              development, testing, and technical documentation. My experience
-              includes building{" "}
-              <strong className="font-semibold text-gray-900 dark:text-white">
-                SIMARPOS
-              </strong>
-              , a web-based management reporting system using Django and
-              PostgreSQL, alongside machine learning projects involving
-              predictive analytics, recommendation systems, and computer
-              vision.
-            </p>
+              <p>
+                I also gained experience in analyzing Pospay application
+                reviews using{" "}
+                <strong className="font-semibold text-gray-900 dark:text-white">
+                  IndoBERT and BERTopic
+                </strong>
+                . In addition, I coordinated with stakeholders and documented
+                discussions through Minutes of Meeting (MoM).
+              </p>
 
-            <p className="mt-5 text-base leading-8 text-gray-600 dark:text-gray-300">
-              I enjoy understanding complex problems, translating business
-              requirements into practical solutions, and collaborating with
-              stakeholders and cross-functional teams. I am eager to continue
-              learning and contribute to projects that create meaningful
-              business and technological value.
-            </p>
+              <p>
+                My project experience covers the software development
+                lifecycle, from requirement gathering and business process
+                modeling to application development, testing, and
+                documentation. One of my main projects is{" "}
+                <strong className="font-semibold text-gray-900 dark:text-white">
+                  SIMARPOS
+                </strong>
+                , a web-based Management Reporting Information System
+                developed using Python, Django, and PostgreSQL in collaboration
+                with PT Pos Indonesia as my final academic project.
+              </p>
 
-            {/* Achievement Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2"
-            >
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                const styles = colorStyles[achievement.color];
+              <p>
+                I am interested in understanding complex business problems,
+                translating requirements into system solutions, and using data
+                and technology to support better decision-making.
+              </p>
+            </div>
+          </motion.div>
 
-                return (
+          {/* Professional Experience Highlights */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
+            <div className="rounded-3xl border border-gray-200 bg-gray-50/80 p-6 dark:border-gray-800 dark:bg-gray-900/60 sm:p-8">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900/40">
+                  <FaBriefcase className="text-xl text-purple-600 dark:text-purple-400" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Professional Experience
+                  </p>
+
+                  <h4 className="font-bold text-gray-900 dark:text-white">
+                    PT Pos Indonesia (Persero)
+                  </h4>
+
+                  <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                    Growth Hacking Intern · Mar 2026 – Jun 2026
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-7">
+                {experiences.map((experience, index) => (
                   <motion.div
-                    key={achievement.title}
+                    key={experience.number}
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
                       duration: 0.4,
-                      delay: index * 0.08,
+                      delay: index * 0.1,
                     }}
-                    whileHover={{ y: -4 }}
-                    className={`rounded-2xl border ${styles.border} bg-white/80 p-4 shadow-sm backdrop-blur transition-shadow hover:shadow-lg dark:bg-gray-900/70 sm:p-5`}
+                    className="relative border-l-2 border-purple-200 pl-6 dark:border-purple-900"
                   >
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${styles.iconBg}`}
-                      >
-                        <Icon className={`text-xl ${styles.icon}`} />
-                      </div>
+                    <span className="absolute -left-[17px] top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-purple-200 bg-white text-xs font-bold text-purple-600 dark:border-purple-800 dark:bg-gray-900 dark:text-purple-400">
+                      {experience.number}
+                    </span>
 
-                      <div className="min-w-0">
-                        <h4 className="font-bold text-gray-900 dark:text-white">
-                          {achievement.title}
-                        </h4>
+                    <h5 className="font-bold text-gray-900 dark:text-white">
+                      {experience.title}
+                    </h5>
 
-                        <p className="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-400">
-                          {achievement.description}
-                        </p>
-                      </div>
-                    </div>
+                    <p className="mt-2 text-sm leading-7 text-gray-600 dark:text-gray-400">
+                      {experience.description}
+                    </p>
                   </motion.div>
-                );
-              })}
-            </motion.div>
-
-            {/* Core Skills & Technologies */}
-            <div className="mt-10">
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                Core Skills & Technologies
-              </h4>
-
-              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                Tools and technologies I use for system analysis, data
-                analytics, and application development.
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2.5">
-                {technologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-purple-500 hover:bg-purple-600 hover:text-white dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-purple-500 dark:hover:bg-purple-600 dark:hover:text-white"
-                  >
-                    {technology}
-                  </span>
                 ))}
               </div>
             </div>
 
-            {/* Professional Focus */}
-            <div className="mt-9 rounded-2xl border border-purple-200 bg-purple-50/70 p-5 dark:border-purple-900/60 dark:bg-purple-950/20 sm:p-6">
+            {/* Areas of Interest */}
+            <div className="mt-6 rounded-3xl border border-purple-200 bg-purple-50/70 p-6 dark:border-purple-900/60 dark:bg-purple-950/20 sm:p-8">
               <h4 className="font-bold text-gray-900 dark:text-white">
                 Areas of Interest
               </h4>
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                Professional fields I am interested in exploring and
+                developing further.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
                 {areasOfInterest.map((area) => (
                   <span
                     key={area}
@@ -329,6 +324,76 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+
+        {/* Skills & Technologies */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="mt-24"
+        >
+          <div className="mb-10 text-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 dark:text-purple-400">
+              Technical Toolkit
+            </span>
+
+            <h3 className="mt-4 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+              Skills & Technologies
+            </h3>
+
+            <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-gray-600 dark:text-gray-400">
+              Tools, methods, and technologies I have used across academic,
+              professional, and project-based work.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {skillGroups.map((group, index) => {
+              const Icon = group.icon;
+
+              return (
+                <motion.div
+                  key={group.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.08,
+                  }}
+                  whileHover={{ y: -4 }}
+                  className="rounded-2xl border border-gray-200 bg-white/80 p-6 shadow-sm transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/70"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900/40">
+                      <Icon className="text-lg text-purple-600 dark:text-purple-400" />
+                    </div>
+
+                    <h4 className="font-bold text-gray-900 dark:text-white">
+                      {group.title}
+                    </h4>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    {group.description}
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
