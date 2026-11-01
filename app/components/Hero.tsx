@@ -8,7 +8,6 @@ import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaDownload,
   FaArrowRight,
   FaAward,
   FaGraduationCap,
@@ -18,38 +17,39 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
-/* ================= CV LINKS ================= */
+/* ================= CV LINK ================= */
 
-const CV_VIEW_URL =
+// Sementara diarahkan ke folder Google Drive.
+// Nanti ganti dengan link PDF langsung jika ingin fitur download.
+
+const CV_URL =
   "https://drive.google.com/drive/folders/1DN15UPVhu1A1S8WeHdOMq7taDpEbBAoZ?usp=drive_link";
 
-const CV_DOWNLOAD_URL = CV_VIEW_URL;
-
-/* ============================================ */
+/* ================= ACHIEVEMENTS ================= */
 
 const achievements = [
   {
     icon: FaGraduationCap,
-    title: "GPA 3.93 / 4.00",
-    description: "Academic Achievement",
+    value: "3.93 / 4.00",
+    label: "Academic GPA",
     color: "purple",
   },
   {
     icon: FaBriefcase,
-    title: "4,000+ Post Offices",
-    description: "PT Pos Indonesia",
+    value: "4,000+",
+    label: "Post Offices Analyzed",
     color: "blue",
   },
   {
     icon: FaBrain,
-    title: "ML Engineer Graduate",
-    description: "Coding Camp · DBS Foundation",
+    value: "ML Engineer",
+    label: "Coding Camp · DBS Foundation",
     color: "green",
   },
   {
     icon: FaFileAlt,
-    title: "SINTA 5",
-    description: "Journal Publication",
+    value: "SINTA 5",
+    label: "Accredited Journal",
     color: "orange",
   },
 ];
@@ -59,51 +59,34 @@ const colorStyles: Record<
   { border: string; iconBg: string; icon: string }
 > = {
   purple: {
-    border: "border-purple-200 dark:border-purple-800",
+    border: "border-purple-200 dark:border-purple-900/70",
     iconBg: "bg-purple-100 dark:bg-purple-900/40",
     icon: "text-purple-600 dark:text-purple-400",
   },
   blue: {
-    border: "border-blue-200 dark:border-blue-800",
+    border: "border-blue-200 dark:border-blue-900/70",
     iconBg: "bg-blue-100 dark:bg-blue-900/40",
     icon: "text-blue-600 dark:text-blue-400",
   },
   green: {
-    border: "border-green-200 dark:border-green-800",
+    border: "border-green-200 dark:border-green-900/70",
     iconBg: "bg-green-100 dark:bg-green-900/40",
     icon: "text-green-600 dark:text-green-400",
   },
   orange: {
-    border: "border-orange-200 dark:border-orange-800",
+    border: "border-orange-200 dark:border-orange-900/70",
     iconBg: "bg-orange-100 dark:bg-orange-900/40",
     icon: "text-orange-600 dark:text-orange-400",
   },
 };
-
-const quickStats = [
-  {
-    value: "3.93",
-    label: "GPA out of 4.00",
-  },
-  {
-    value: "4,000+",
-    label: "Post Offices Analyzed",
-  },
-  {
-    value: "6",
-    label: "Regional Offices",
-  },
-  {
-    value: "SINTA 5",
-    label: "Journal Publication",
-  },
-];
 
 export default function Hero() {
   const [openForm, setOpenForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   const [isSending, setIsSending] = useState(false);
+
+  /* ================= CONTACT FORM ================= */
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -144,110 +127,89 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-white py-24 dark:bg-black sm:py-28"
-    >
-      {/* ================= BACKGROUND ================= */}
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 overflow-hidden"
+    <>
+      <section
+        id="home"
+        className="relative flex min-h-screen items-center overflow-hidden bg-white py-28 dark:bg-black lg:py-32"
       >
-        <div className="absolute -left-20 top-20 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
+        {/* BACKGROUND DECORATION */}
 
-        <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
 
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-fuchsia-500/5 blur-[150px]" />
-      </div>
+          <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl" />
+        </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
-          {/* ================= LEFT CONTENT ================= */}
+        <div className="container relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
 
-          <motion.div
-            initial={{ opacity: 0, x: -35 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="min-w-0"
-          >
-            {/* Professional Badge */}
+            {/* LEFT CONTENT */}
 
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/5 px-4 py-2 text-sm font-medium text-purple-700 dark:text-purple-300 sm:px-5"
+              transition={{ duration: 0.7 }}
+              className="min-w-0"
             >
-              <FaAward className="shrink-0" />
+              {/* PROFESSIONAL BADGE */}
 
-              <span>
-                System Analyst · Business Analyst · Data Analyst
-              </span>
-            </motion.div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/5 px-4 py-2 text-xs font-semibold tracking-wide text-purple-700 dark:text-purple-300 sm:text-sm">
+                <FaAward />
 
-            {/* Main Heading */}
+                <span>
+                  SYSTEM ANALYSIS · BUSINESS ANALYSIS · DATA ANALYTICS
+                </span>
+              </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="mt-7 text-4xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl"
-            >
-              Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 bg-clip-text text-transparent">
-                Rika Rostika Afipah
-              </span>
-            </motion.h1>
+              {/* NAME */}
 
-            {/* Professional Summary */}
+              <h1 className="mt-7 text-4xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+                Hi, I&apos;m{" "}
+                <span className="bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 bg-clip-text text-transparent">
+                  Rika Rostika Afipah.
+                </span>
+              </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.6 }}
-              className="mt-7"
-            >
-              <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 sm:text-2xl">
-                Turning Business Needs into Digital Solutions
+              {/* PROFESSIONAL HEADLINE */}
+
+              <h2 className="mt-7 text-xl font-semibold leading-relaxed text-gray-800 dark:text-gray-200 sm:text-2xl">
+                Turning Business Challenges into Digital Solutions.
               </h2>
 
+              {/* SUMMARY */}
+
               <p className="mt-5 max-w-2xl text-base leading-8 text-gray-600 dark:text-gray-300 sm:text-lg">
-                A graduate of D-III Information Management at Universitas
-                Logistik dan Bisnis Internasional (ULBI), with a GPA of
-                3.93/4.00. Experienced in operational data analysis at
-                PT Pos Indonesia, business process modeling, and end-to-end
-                information system development. Interested in building
-                practical solutions through system analysis, data analytics,
-                web development, and machine learning.
+                An Information Management graduate from Universitas Logistik
+                dan Bisnis Internasional (ULBI), with a GPA of 3.93/4.00.
+                Experienced in operational data analysis, business process
+                improvement, and information system development. Passionate
+                about translating business needs into practical technology
+                solutions through system analysis, data analytics, and
+                web development.
               </p>
-            </motion.div>
 
-            {/* ================= ACHIEVEMENTS ================= */}
+              {/* ACHIEVEMENTS */}
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
-            >
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                const styles = colorStyles[achievement.color];
+              <div className="mt-9 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                {achievements.map((item, index) => {
+                  const Icon = item.icon;
+                  const styles = colorStyles[item.color];
 
-                return (
-                  <motion.div
-                    key={achievement.title}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      delay: 0.65 + index * 0.1,
-                      duration: 0.4,
-                    }}
-                    whileHover={{ y: -4 }}
-                    className={`rounded-2xl border ${styles.border} bg-white/70 p-4 shadow-sm backdrop-blur transition-shadow hover:shadow-lg dark:bg-gray-900/70 sm:p-5`}
-                  >
-                    <div className="flex items-center gap-3">
+                  return (
+                    <motion.div
+                      key={item.value}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.3 + index * 0.1,
+                      }}
+                      whileHover={{ y: -4 }}
+                      className={`flex items-center gap-4 rounded-2xl border ${styles.border} bg-white/80 p-4 shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-900/70 sm:p-5`}
+                    >
                       <div
                         className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${styles.iconBg}`}
                       >
@@ -256,270 +218,153 @@ export default function Hero() {
 
                       <div className="min-w-0">
                         <h3 className="text-sm font-bold text-gray-900 dark:text-white sm:text-base">
-                          {achievement.title}
+                          {item.value}
                         </h3>
 
                         <p className="mt-1 text-xs leading-5 text-gray-500 dark:text-gray-400 sm:text-sm">
-                          {achievement.description}
+                          {item.label}
                         </p>
                       </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              {/* ACTION BUTTONS */}
+
+              <div className="mt-9 flex flex-wrap gap-3">
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() =>
+                    document
+                      .getElementById("projects")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3.5 font-semibold text-white shadow-lg transition-shadow hover:shadow-purple-500/30"
+                >
+                  View My Projects
+                  <FaArrowRight />
+                </motion.button>
+
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  href={CV_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-purple-300 bg-white/70 px-6 py-3.5 font-semibold text-gray-800 transition hover:border-purple-500 hover:text-purple-600 dark:border-purple-800 dark:bg-gray-900/70 dark:text-white dark:hover:text-purple-400"
+                >
+                  View CV
+                </motion.a>
+
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => setOpenForm(true)}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 px-6 py-3.5 font-semibold text-gray-700 transition hover:border-purple-500 hover:text-purple-600 dark:border-gray-700 dark:text-gray-200 dark:hover:text-purple-400"
+                >
+                  <FaEnvelope />
+                  Contact Me
+                </motion.button>
+              </div>
+
+              {/* SOCIAL LINKS */}
+
+              <div className="mt-9 flex flex-wrap items-center gap-7 text-sm font-medium text-gray-600 dark:text-gray-300">
+                <a
+                  href="https://github.com/RikaProjects"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  <FaGithub className="text-xl" />
+                  GitHub
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/rika-rostika-afipah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  <FaLinkedin className="text-xl" />
+                  LinkedIn
+                </a>
+
+                <a
+                  href="mailto:rikarapipah@gmail.com"
+                  aria-label="Send email"
+                  className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  <FaEnvelope className="text-xl" />
+                  Email
+                </a>
+              </div>
             </motion.div>
 
-            {/* ================= CTA BUTTONS ================= */}
+            {/* RIGHT PROFILE IMAGE */}
 
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-              className="mt-9 flex flex-wrap gap-3"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative mx-auto w-full max-w-md"
             >
-              {/* See Projects */}
+              {/* IMAGE GLOW */}
 
-              <motion.button
-                type="button"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() =>
-                  document
-                    .getElementById("projects")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3.5 font-semibold text-white shadow-lg transition-shadow hover:shadow-purple-500/30 sm:px-7"
-              >
-                See My Projects
-                <FaArrowRight />
-              </motion.button>
-
-              {/* Download CV */}
-
-              <motion.a
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                href={CV_DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open CV folder on Google Drive"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-purple-300 bg-white/70 px-5 py-3.5 font-semibold text-gray-800 transition hover:border-purple-500 hover:text-purple-600 dark:border-purple-800 dark:bg-gray-900/70 dark:text-white dark:hover:text-purple-400 sm:px-6"
-              >
-                <FaDownload />
-                Download CV
-              </motion.a>
-
-              {/* View CV */}
-
-              <motion.a
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                href={CV_VIEW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View CV folder on Google Drive"
-                className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white/70 px-5 py-3.5 font-semibold text-gray-800 transition hover:border-purple-500 hover:text-purple-600 dark:border-gray-700 dark:bg-gray-900/70 dark:text-white dark:hover:text-purple-400 sm:px-6"
-              >
-                View CV
-              </motion.a>
-
-              {/* Contact */}
-
-              <motion.button
-                type="button"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => setOpenForm(true)}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-purple-300 px-5 py-3.5 font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-800 dark:text-purple-300 dark:hover:bg-purple-950/40 sm:px-6"
-              >
-                <FaEnvelope />
-                Contact Me
-              </motion.button>
-            </motion.div>
-
-            {/* ================= SOCIAL LINKS ================= */}
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 text-sm font-medium text-gray-600 dark:text-gray-300"
-            >
-              <a
-                href="https://github.com/RikaProjects"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Rika's GitHub profile"
-                className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
-              >
-                <FaGithub className="text-xl" />
-                GitHub
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/rika-rostika-afipah"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Rika's LinkedIn profile"
-                className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
-              >
-                <FaLinkedin className="text-xl" />
-                LinkedIn
-              </a>
-
-              <a
-                href="mailto:rikarapipah@gmail.com"
-                aria-label="Send Rika an email"
-                className="inline-flex items-center gap-2 transition hover:text-purple-600 dark:hover:text-purple-400"
-              >
-                <FaEnvelope className="text-xl" />
-                Email
-              </a>
-            </motion.div>
-          </motion.div>
-
-          {/* ================= RIGHT PROFILE ================= */}
-
-          <motion.div
-            initial={{ opacity: 0, x: 35, scale: 0.97 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative mx-auto w-full max-w-md"
-          >
-            {/* Glow */}
-
-            <div
-              aria-hidden="true"
-              className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-purple-600 via-fuchsia-500 to-indigo-600 opacity-20 blur-3xl"
-            />
-
-            {/* Decorative Shapes */}
-
-            <div
-              aria-hidden="true"
-              className="absolute -right-4 -top-4 h-24 w-24 rounded-3xl border-2 border-purple-500/30"
-            />
-
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-4 -left-4 h-28 w-28 rounded-3xl border-2 border-indigo-500/30"
-            />
-
-            {/* Profile Image */}
-
-            <div className="relative overflow-hidden rounded-3xl border-8 border-white bg-gray-100 shadow-2xl dark:border-gray-900 dark:bg-gray-900">
-              <Image
-                src="/Images/me.jpeg"
-                alt="Rika Rostika Afipah"
-                width={520}
-                height={650}
-                priority
-                sizes="(max-width: 1024px) 85vw, 420px"
-                className="aspect-[4/5] w-full object-cover object-center"
+              <div
+                aria-hidden="true"
+                className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-purple-600 via-fuchsia-500 to-indigo-600 opacity-20 blur-3xl"
               />
 
-              {/* Image Overlay */}
+              {/* DECORATIVE FRAME */}
 
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent px-6 pb-7 pt-24 sm:px-8">
-                <p className="text-2xl font-bold text-white">
-                  Rika Rostika Afipah
-                </p>
+              <div
+                aria-hidden="true"
+                className="absolute -right-4 -top-4 h-24 w-24 rounded-3xl border-2 border-purple-500/30"
+              />
 
-                <p className="mt-2 text-sm leading-6 text-gray-200">
-                  System Analysis · Business Intelligence · Data Analytics
-                </p>
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-4 -left-4 h-28 w-28 rounded-3xl border-2 border-indigo-500/30"
+              />
 
-                <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500" />
-              </div>
-            </div>
+              {/* PROFILE PHOTO */}
 
-            {/* Floating Academic Card */}
+              <div className="relative overflow-hidden rounded-3xl border-8 border-white bg-gray-100 shadow-2xl dark:border-gray-900 dark:bg-gray-900">
+                <Image
+                  src="/Images/me.jpeg"
+                  alt="Rika Rostika Afipah"
+                  width={520}
+                  height={650}
+                  priority
+                  sizes="(max-width: 1024px) 85vw, 420px"
+                  className="aspect-[4/5] w-full object-cover object-center"
+                />
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-              className="absolute -left-3 top-10 rounded-2xl border border-gray-200 bg-white/95 p-4 shadow-xl backdrop-blur dark:border-gray-700 dark:bg-gray-900/95 sm:-left-8"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900/40">
-                  <FaGraduationCap className="text-xl text-purple-600 dark:text-purple-400" />
-                </div>
-
-                <div>
-                  <p className="text-lg font-bold text-gray-900 dark:text-white">
-                    3.93 / 4.00
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent px-6 pb-7 pt-24">
+                  <p className="text-2xl font-bold text-white">
+                    Rika Rostika Afipah
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    Academic GPA
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Floating Experience Card */}
-
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.5 }}
-              className="absolute -right-2 bottom-28 rounded-2xl border border-gray-200 bg-white/95 p-4 shadow-xl backdrop-blur dark:border-gray-700 dark:bg-gray-900/95 sm:-right-8"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900/40">
-                  <FaBriefcase className="text-lg text-blue-600 dark:text-blue-400" />
-                </div>
-
-                <div>
-                  <p className="text-base font-bold text-gray-900 dark:text-white">
-                    4,000+
+                  <p className="mt-2 text-sm text-gray-200">
+                    System Analysis · Business Analysis · Data Analytics
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    Post Office Records
-                  </p>
+                  <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500" />
                 </div>
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
+      </section>
 
-        {/* ================= QUICK STATS ================= */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="mt-24 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5"
-        >
-          {quickStats.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.08,
-              }}
-              whileHover={{ y: -4 }}
-              className="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/70 sm:p-6"
-            >
-              <h3 className="break-words text-2xl font-bold text-purple-600 dark:text-purple-400 sm:text-3xl">
-                {item.value}
-              </h3>
-
-              <p className="mt-2 text-xs leading-5 text-gray-500 dark:text-gray-400 sm:text-sm">
-                {item.label}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* ================= CONTACT MODAL ================= */}
+      {/* CONTACT MODAL */}
 
       <AnimatePresence>
         {openForm && (
@@ -545,8 +390,6 @@ export default function Hero() {
               aria-labelledby="contact-title"
               className="relative my-auto w-full max-w-lg rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl dark:border-gray-800 dark:bg-gray-900 sm:p-8"
             >
-              {/* Close Button */}
-
               <button
                 type="button"
                 onClick={closeForm}
@@ -555,8 +398,6 @@ export default function Hero() {
               >
                 <FaTimes className="text-xl" />
               </button>
-
-              {/* Modal Heading */}
 
               <div className="pr-8">
                 <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-3 py-1.5 text-xs font-semibold text-purple-600 dark:text-purple-400">
@@ -576,8 +417,6 @@ export default function Hero() {
                   Feel free to send me a message.
                 </p>
               </div>
-
-              {/* Form Feedback */}
 
               {submitted ? (
                 <div
@@ -703,6 +542,6 @@ export default function Hero() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </>
   );
 }
